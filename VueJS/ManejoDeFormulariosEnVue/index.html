@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso VueJs</title>
+</head>
+<body>
+	
+	<div id="app"> 
+		<input type="text" name="name" placeholder="Ingresa tu nombre" v-model= "nombre">
+
+		<p>Tu nombre en mayúscula es {{ nombre | uppercase}}</p>
+
+		<form v-on:submit.prevent="submit" action="" method="get">
+			<h2>¿Cuáles son tus cursos favoritos?</h2>
+			<input v-model="cursos" type="checkbox" id="vue" value="Vue.Js">
+			<label for="vue">Curso de Vue.js</label>
+
+			<input v-model="cursos" type="checkbox" id="python" value="Python">
+			<label for="python">Curso de Python</label>
+
+			<input v-model="cursos" type="checkbox" id="ml" value="Machine Learning">
+			<label for="ml">Curso de Machine Learning</label>
+
+			<button type="submit">Enviar</button>
+		</form>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
